@@ -6,8 +6,8 @@
 	<script type="text/javascript" src="wms/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="wms/js/popper.min.js"></script>
 	<script type="text/javascript" src="wms/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="wms/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="wms/style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body style="background-color: #e9e9e9;">
 	<?php

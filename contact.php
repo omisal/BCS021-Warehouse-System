@@ -2,12 +2,49 @@
 <html>
 <head>
 	<title>Brainner's Warehouse</title>
+	<style type="text/css">
+		#contact{
+			width: 70%;
+			margin: auto;
+		}
+		table{
+			width: 100%;
+			font-size: larger;
+			text-align: center;
+		}
+		#contact table img{
+			margin: auto;
+			width: 70px;
+			height: 70px;
+			display: block;
+			font-size: larger;
+		}
+		#comment{
+			width: 70%;
+			margin: auto;
+			border-radius: 10px;
+			font-size: large;
+			margin-bottom: 100px;
+		}
+		input{
+			height: 40px;
+			width: 100%;
+			border-radius: 10px;
+		}
+		textarea{
+			padding: 10px;
+			font-size: large;
+			width: 90%;
+			border-radius: 10px;
+		}
+
+	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="wms/js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="wms/js/popper.min.js"></script>
 	<script type="text/javascript" src="wms/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="wms/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="wms/style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link rel="stylesheet" type="text/css" href="wms/fontawesome-free/css/all.min.css">
 </head>
 <body>

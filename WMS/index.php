@@ -12,24 +12,11 @@
 	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<style type="text/css">
-		footer.footer{
-			background-color: #4caf50;
-			position:fixed;
-			bottom: 0px;
-			width: 100%;
-			font-size: medium;
-			font-weight: bold;
-			text-align: center;
-			color: white;
-			padding: 20px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
-<body style="background-color: #e9e9e9;">
+<body>
 	<?php
 		require_once("navigation.php");
 	?>
@@ -40,17 +27,17 @@
 	<div class="row m-3">
 		<div class="col-lg-12">
 			<h1>Welcome <?php echo $result1["FirstName"].", ".$result1["MiddleName"][0].". ".$result1["LastName"];?></h1>
-			<p>My main content comes here</p>
+			<p></p>
 			<div class="alert alert-success">
-				Your last successfull login was on <strong>Thursday August 5,2020 4:00:34</strong>
+				Your last successfull login was on <strong>
+					<?php echo date_format(date_create($result1['LastLogin']),"l, F d, Y h:i:s a");?>
+				</strong>
 			</div>
 		</div>
 	</div>
-	<footer class="footer">
-		<div id="foo">
-			Copyright Brainners &copy; 2020 All rights reserved.
-		</div>
-	</footer>
+	<?php
+		require_once("footer.php");
+	?>
 </div>
 <!-- End demo content -->	
 <script type="text/javascript">

@@ -19,46 +19,83 @@
         </div>
     </div>
     <ul class="nav flex-column mb-0">
-        <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user mr-3"></i><?php echo $result1["FirstName"].", ".$result1["MiddleName"][0].". ".$result1["LastName"];?></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Security</a>
-                </div>
-            </li>
+        <li class="nav-item dropdow">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bado.php" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user mr-3"></i><?php echo $result1["FirstName"].", ".$result1["MiddleName"][0].". ".$result1["LastName"];?></a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="profile.php">Profile</a>
+                <a class="dropdown-item" href="bado.php">Security</a>
+            </div>
+        </li>
         <li class="nav-item">
             <a href="index.php" class="nav-link">
                 <i class="fa fa-home mr-3"></i>Home
             </a>
         </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="fa fa-address-card mr-3"></i>About
-            </a>
-        </li>
+        
         <?php
         if ($_SESSION["wh_role"]=="Manager") {
         ?>
+        <li class="nav-item">
+            <a href="manage-staff.php" class="nav-link">
+                <i class="fa fa-users mr-3"></i>Manage Staff
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bado.php" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cogs mr-3"></i>Manage Others</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="manage-whroom.php">Warehouse Rooms</a>
+                <a class="dropdown-item" href="manage-shop.php">Manage Shops</a>
+                <a class="dropdown-item" href="manage-product.php">Manage Products</a>
+                <a class="dropdown-item" href="manage-supplier.php">Manage Suppliers</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="manage-import.php" class="nav-link">
+                <i class="fa fa-address-book mr-3"></i>View Imports
+            </a>
+        </li>
 
+        <li class="nav-item">
+            <a href="manage-order.php" class="nav-link">
+                <i class="fa fa-book mr-3"></i>View Orders
+            </a>
+        </li>
         <?php
         }if ($_SESSION["wh_role"]=="Store Keeper") {
         ?>
-
-        <?php
-        }if ($_SESSION["wh_role"]=="Shop Keeper") {
-        ?>
-
-        <?php
-        }
-        ?>
-
         <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="fa fa-cubes mr-3"></i>Services
+            <a href="manage-product.php" class="nav-link">
+                <i class="fa fa-cogs mr-3"></i>Manage Products
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="manage-import.php" class="nav-link">
+                <i class="fa fa-address-book mr-3"></i>View Imports
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="manage-placed-order.php" class="nav-link">
+                <i class="fa fa-book mr-3"></i>View Orders
+            </a>
+        </li>
+        <?php
+        }if ($_SESSION["wh_role"]=="Shop Keeper") {
+        ?>
+        <li class="nav-item">
+            <a href="manage-product.php" class="nav-link">
+                <i class="fa fa-cogs mr-3"></i>Manage Products
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="manage-order.php" class="nav-link">
+                <i class="fa fa-book mr-3"></i>View Orders
+            </a>
+        </li>
+        <?php
+        }
+        ?>
+        <li class="nav-item">
+            <a href="bado.php" class="nav-link">
                 <i class="fa fa-headset mr-3"></i>Help and Support
             </a>
         </li>

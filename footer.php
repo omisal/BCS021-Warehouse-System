@@ -1,6 +1,6 @@
 <footer class="footer">
 	<div id="footer">
-		Copyright Brainners &copy; 2020 All rights reserved.
+		Copyright Brainners &copy; <?php echo date("Y");?> All rights reserved.
 	</div>
 </footer>
 
